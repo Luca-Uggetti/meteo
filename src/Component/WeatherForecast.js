@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { getWeather } from "../api/Utils";
 
-import { getWeather } from "../../public/api/Utils";
-import {
-  Container,
-  ForecastWrapper,
-  InputWrapper,
-  TopBar,
-} from "../styles/StyledComponent";
+// import {
+//   Container,
+//   ForecastWrapper,
+//   InputWrapper,
+//   TopBar,
+// } from "../styles/styledComponent";
 
 export const Weatherforecast = () => {
   const [weatherList, setWeatherList] = useState([]);
@@ -33,17 +33,17 @@ export const Weatherforecast = () => {
   };
 
   return (
-    <Container>
-      <TopBar>
+    <div>
+      <div>
         <p> Ricerca la città per le previsioni </p>
-      </TopBar>
+      </div>
 
-      <InputWrapper onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input type="text" placeholder="scrivi il nome della città" />
         <button type="submit">cerca</button>
-      </InputWrapper>
+      </form>
 
-      <ForecastWrapper>
+      <div>
         <h1>{cityName}</h1>
         <ul>
           <li>
@@ -71,8 +71,8 @@ export const Weatherforecast = () => {
             {weatherList?.wind?.speed}km/h
           </li>
         </ul>
-      </ForecastWrapper>
-    </Container>
+      </div>
+    </div>
   );
 };
 
