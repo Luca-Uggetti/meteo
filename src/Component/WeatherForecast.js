@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { getWeather } from "../../public/api/Utils";
+import { getWeather } from "../utils";
 import {
   Container,
   ForecastWrapper,
