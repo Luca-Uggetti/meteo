@@ -1,9 +1,9 @@
-import { Weatherforecast } from "./Component/WeatherForecast";
+import { BatProject } from "./Component/BatProject";
 
 export default function App() {
   return (
     <div className="App">
-      <Weatherforecast />
+      <BatProject></BatProject>
     </div>
   );
 }
